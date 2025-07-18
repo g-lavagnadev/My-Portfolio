@@ -1,0 +1,216 @@
+/* Comment goes here */
+* {
+    box-sizing: border-box; /* the ratios won't count the padding (usually for width%) */
+}
+
+body {
+ background-color: #cccccc; /* Won't matter here */
+ background-repeat: no-repeat;
+ background-position: center;
+ background-attachment: fixed;
+ background-size: 100% 100%; /* Background img fits the screen */
+ margin: 0; /* no old white margin */
+}
+
+header{
+    background-color: rgb(204,255,255);
+    text-align: center;
+    padding: 25px;
+    background-image: url("pics/ita top.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* stretch header background */
+}
+
+#logo {
+    display:inline-block; /* it doesn't take whole line */
+    padding: 5px; /* provides space between logo and title */
+}
+
+h1 {
+    display:inline-block; /* it doesn't take whole line */
+    font-family: verdana, arial; /* If 1st font doesn't work on that browser, use 2nd */
+    font-size: 25px;
+    border: 3px solid #B3D9FF;
+    border-radius: 15px; /* Smussatura / border-smoothing */
+    padding: 5px; /* Space between text and border */
+    background-color: rgba(255, 255, 255, 0.2); /* white transparent (0.2) background to make title readable */
+
+}
+
+a { /* for all the links */
+    text-decoration: none; /* no underlined text */
+    color: inherit; /* & match the color of the element the are in instead of blue */
+}
+
+p {
+    font-family: verdana, arial;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h4 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.menu { /* this is the horizontal navigation bar after the title */
+    background-color: rgb(118,181,181);
+    height: 50px;
+}
+
+.flexboxes{ /* FLEXBOXES NAVIGATION MENU STARTING ------------------------------ */
+    display: flex; /* Basic flexbox property */
+    height: 100%;
+    justify-content: flex-start; /* Boxes start left */
+    gap: 0px; /* Gap between boxes */
+    flex-wrap: wrap; /* Boxes will go on next line when screen is small */
+
+}
+.box{
+    flex-grow: 1;
+    max-width: 15%;
+    flex-basis: 15%; /* To fit the flex boxes in one line */
+    max-height: 10%;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px; /* smussamento */
+    background-color: rgb(118,181,181);
+}
+
+#box4{
+    flex-grow: 0.8;
+    display: flex;
+    background-color: rgb(118,181,181);
+    position: relative;
+
+}            /* FLEXBOXES NAVIGATION MENU ENDING ------------------------------ */
+
+
+.dropdown{                  /* DROP-DOWN MENU STARTING ------------------------------ */
+    display: inline-block; /* limits the hitbox of the recipe menu */
+    position: relative; /* change to make it part of the flexbox */
+}
+
+.dropdown button{
+    background-color: rgb(118,181,181); /* make it as the other boxes */
+    font-family: Verdana, Arial;
+    color: inherit; /* text color inherited from other elements */
+    font-size: inherit; /* text size inherited from other elements */
+    text-decoration: none; /* remove bold, just for sure */
+    text-align: center;
+    border-radius: 15px;
+    width: 100%; /* now it's like the other boxes */
+    /* padding: 10px 15px; */ /* size button */
+    border: none; /* no underline */
+    cursor: pointer; /* on curso hover it becomes a hand */
+}
+
+.dropdown a{
+    display: block; /* recipes will be displayed as a block */
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.dropdown .recipes{
+    display: none; /* this property hides the menu if not hovered (*) */
+    position: absolute; /* don't push the other content */
+    min-width: 100px; /* minimum width for the boxes */
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.8); /* shadow: horizontal, vertical, blur */
+    background-color: rgb(118,181,181); /* make it like the other boxes */
+    font-family: Verdana, Arial;
+    font-size: 20px;
+    border-radius: 7px; /* now it's like the other boxes */
+}
+
+.dropdown:hover .recipes{
+    display: block; /* (*) here we display the hidden recipes when we hover them */
+}
+
+.dropdown:hover button {
+    background-color: rgb(9,125,113); /* changes button color, gives feedback on hover */
+}
+
+.dropdown a:hover{
+    background-color: rgb(9,125,113); /* change the color of the hovered menu boxes */
+}                                   /* DROP-DOWN MENU ENDING ------------------------------*/
+
+.searchbar { /* for the searchbar */
+    min-height: 50px;
+}
+
+#lensbox { /* for the button of the lens (not in use anymore) */
+    height: 50px;
+    width: 50px;
+}
+
+#lens { /* for the lens icon (not in use anymore) */
+    height: 35px;
+    width: 35px;
+}
+
+ul { /* for the suggestions appearing under the autocomplete searchbar*/
+    position: absolute; /* make the position of the recipe adjustable */
+    left: 78%; /* adjusting the position to be near the searchbar */
+    list-style-type: none;
+    font-family: verdana, arial;
+    font-size: 15px;
+    text-transform: uppercase; /* make it alway uppercase */
+    font-weight: bold; /* make it bold */
+}
+
+.slider img {       /* IMAGE SLIDER STARTING ------------------------------ */
+    width: 10%;
+    height: 100%;
+    gap: 10px; /* added gap */
+    object-fit: cover; /* slides img inside the borders */
+    border-radius: 10px; /* smussatura angoli */
+    border: 2px solid rgb(180,180,180); /* gives a box border */
+    transition: all 0.25s ease-in-out; /* type of transition */
+}
+
+.slider img:hover {
+    width: 20%; /* the img opens when you hover it */
+}
+
+.slider { /* added extra */
+    text-align: center; /* center slider */
+    width: 100%;        /* take full width */
+}                    /* IMAGE SLIDER ENDING ------------------------------ */
+
+.audio {
+   bottom: 3%;
+   right: 3%;
+}
+
+footer{  /* */
+    display: block;
+    position: fixed; /* lock it ... */
+    bottom: 0; /* ... to the bottom */
+    width: 100%; /* assures it takes all the page */
+    max-height: 10%;
+    clear: both; /* clears a float */
+    background-color: rgb(144,184,192);
+    text-align: center;
+    padding: 25px;
+    background-image: url("pics/ita bot.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* stretch header background */
+}
+
+.stars { /* all rating stars */
+    height: 30px;
+    width: 30px;
+    margin-bottom: 5%; /* so that the page doesn't end suddently */
+}
+
+#star1 {
+        margin-left: 5%; /* add a margin just to the first star, the other will come right after */
+}
+
+@media screen and (max-width:750px) { /* for MOBILE devices (responsive CSS)*/
+    .flexboxes {
+        flex-wrap: wrap; /* adjust flexboxes on mobile */
+    }
+}

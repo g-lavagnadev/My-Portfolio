@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Boostrap integration: -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet"> <!-- Link to the CSS -->
+        <title>Cucina Italiana</title>
+        <link rel="icon" type="image/png" href="pics/faviconita.png"> <!-- Changes the icon of the browser tab (favicon) -->
+    </head>
+
+    <body>
+        <header>
+            <div id="logo">
+                <p><img src="pics/cheffone.jpg" alt="logo of an italian chef" width="100"></p>
+            </div>
+            <h1> The Italian Home Chef</h1> <!-- Title -->
+        </header>
+        <main>
+            <nav class="menu"> <!-- Navigable Menu -->
+                <div class="flexboxes">
+                    <div class="box" id="box1"><a href="index.html">Home</a></div>
+                    <div class="box" id="box2"><a href="aboutus.html">About us</a></div>
+                    <div class="box" id="box3">
+                        <div class="dropdown"> <!-- Dropdown Menu -->
+                            <button>Recipes</button>
+                                <div class="recipes">
+                                    <a href="pesto.html">Pesto</a> <!-- link to other page-->
+                                    <a href="pizza.html">Pizza</a>
+                                    <a href="focaccia.html">Focaccia</a>
+                                    <a href="carbonara.html">Carbonara</a>
+                                    <a href="tiramisu.html">Tiramisù</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="box" id="box4">
+                        <input class="searchbar" type="text" placeholder="Look for a recipe"> <!-- Search bar with suggestions -->
+                        <ul></ul> <!-- This is the text that the automplete will use -->
+                        <!-- the script.js file will make a <li> appear here as a suggestion of the autcomplete -->
+                    </div>
+                </div>
+                <ol class="breadcrumb"> <!-- Here starts the "Boostrap" divider (*)-->
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Tiramisù</li>
+                </ol>
+            </nav>
+            <br>
+            <br>
+            <h2 style="text-align: center;"> Tiramisù </h2>
+            <br>
+            <h4>Ingredients</h4>
+            <p>Mascarpone 750g</p>
+            <p>Savoiardi 250g</p>
+            <p>5 fresh eggs</p>
+            <p>Sugar 120g</p>
+            <p>Bitter cocoa powder</p>
+            <br>
+            <h4>Preparation</h4>
+                <p>Prepare the coffee with the moka or a coffee machine and let it cool in a low and wide bowl. Add sugar.</p>
+                <p>Separate the eggs. Whip the yolks with the electric whisk, adding half the sugar. As soon as the mixture has become light and frothy, and with the whisks still running, add the mascarpone. You will have obtained a thick and compact cream.</p>
+                <p>Clean the whisks and move on to whipping the egg whites. When they are frothy, pour in the remaining sugar a little at a time.</p>
+                <p>Take a spoonful of egg whites and pour it into the bowl with the mascarpone cream and mix vigorously. Then proceed to add the remaining part of egg whites, mixing very delicately from the bottom upwards.</p>
+                <p>Soak the ladyfingers in the coffee, first on one side and then on the other for 1 second each.</p>
+                <p>Make one level of ladyfingers and cover it with the cream. Repeat it for 2 or 3 levels.</p>
+                <p>Put the tiramisù in the fridge for 2 hours or more.</p>
+                <p>Add the cocoa powder on top before serving it.</p>
+            <br>
+            <div>
+                <img id="star1" class="stars" src="pics/star.svg" alt="first star icon">
+                <img id="star2" class="stars" src="pics/star.svg" alt="second star icon">
+                <img id="star3" class="stars" src="pics/star.svg" alt="third star icon">
+                <img id="star4" class="stars" src="pics/star.svg" alt="fourth star icon">
+                <img id="star5" class="stars" src="pics/star.svg" alt="fifth star icon">
+           </div>
+           </main>
+           <script src="CUCINAscripts.js"></script> <!-- Link to the JavaScript file -->
+    </body>
+</html>
